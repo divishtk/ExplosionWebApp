@@ -9,31 +9,43 @@
 
 </head>
 <style>
-
-.bg-custom
-{
-	background-color:#d7ccc8;
-	
+.bg-custom {
+	background-color: #d7ccc8;
 }
 
-.navbar .nav-item:hover .nav-link
-{
-
-	background-color:#bcaaa4;
-	color:#795548;
-	border-radius:15px;
+.navbar .nav-item:hover .nav-link {
+	background-color: #bcaaa4;
+	color: #795548;
+	border-radius: 15px;
 }
 
-	
- 
-	
-	.form-inline button:hover
-	{
-	background-color:#bcaaa4;
-				border-radius:8px;
-	
-	}
-	
+.form-inline button:hover {
+	background-color: #bcaaa4;
+	border-radius: 8px;
+}
+
+
+.lol a
+{
+
+background-color:#d7ccc8;
+color:white;
+border-radius:10px;
+
+}
+
+.lol a:hover
+{
+background-color: #bcaaa4;
+}
+
+.heading
+{
+
+	color: #bcaaa4;
+
+}
+
 
 
 </style>
@@ -48,7 +60,7 @@
 <div class="col-md-3">
 
 
-<h3>ExplosionDessert</h3>
+<h3 class="heading">ExplosionDessert</h3>
 
 
 </div>
@@ -56,24 +68,24 @@
 
    <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <button class="btn my-2 my-sm-0" type="submit">Search</button>
     </form>
 
 
 </div>
 
-<div class="col-md-3">
+<div class="col-md-3 lol">
 
 
-<a href="" class="btn btn-success">Login</a>
-<a href="" class="btn btn-success">Sign In</a>
-
-</div>
-
-
+<a href="" class="btn btn-cust ">Login</a>
+<a href="" class="btn btn-cust">Sign In</a>
 </div>
 
 </div>
+
+
+</div>
+
 
 
 
