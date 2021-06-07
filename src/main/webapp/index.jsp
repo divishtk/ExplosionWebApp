@@ -67,14 +67,14 @@ padding:7px 10px;
 	<!-- New Desserts -->
 	
 	
-	<%
-		
+	<%--<%
+	JUST CHECKING FOR CONNECTION
 Connection con=DBConnection.getConnection();
 out.println(con);
 
 
 
-%>
+--%>
 	
 
 	<div class="container mt-5">

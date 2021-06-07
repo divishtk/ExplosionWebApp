@@ -16,7 +16,7 @@ public class DBConnection {
 		try 
 		{
 			
-			Class.forName("com.mysql.cj.jdbc.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");	
 			con=DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/DessertApp","root","admin123");
 			
 			

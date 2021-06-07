@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,12 +9,12 @@
 <%@include file="Components/css.jsp"%>
 
 <style>
-.lol button
-{
-background-color:#d7ccc8;
-color:white;
-border-radius:10px;
+.lol button {
+	background-color: #d7ccc8;
+	color: white;
+	border-radius: 10px;
 }
+
 .image img {
 	background-repeat: no-repeat;
 	position: absolute;
@@ -24,45 +24,100 @@ border-radius:10px;
 </style>
 </head>
 <body>
-<%@include file="Components/navbar.jsp"%>
+	<%@include file="Components/navbar.jsp"%>
 
 
-<div class="container-fluid image">
+	<div class="container-fluid image">
 
 		<img src="img/final_cup.png" />
 
 
 	</div>
 
-<div class="container lol">
+	<div class="container lol">
 
 
-<div class="row">
+		<div class="row">
 
 
-<div class="col-md-4 offset-md-4">
+			<div class="col-md-4 offset-md-4">
 
 
-<div class="card mt-5">
+				<div class="card mt-5">
 
+						<%
+						String success=(String)session.getAttribute("successMsg");
+						String failure=(String)session.getAttribute("failureMsg");
 
+						String check=(String)session.getAttribute("check");
 
-<div class="card-body">
-
-<div class="card-heading text-center">
-
-<h2 style="color:#d7ccc8">Sign up Here</h2>
-
+						if(success!=null)
+						{%>
+							
+					
+					<div class="alert alert-success" role="alert">
+						Registred Successfully
 </div>
+							
+							
+							
+					<%	}
+						else if(failure!=null)
+						{%>
+							
+							<div class="alert alert-danger" role="alert">
+Something Went Wrong On Server
+</div>
+							
+							
+							
+							
+							
+							
+						<% }
+						
+						
+						else if(check!=null)
+						{%>
+								<div class="alert alert-danger" role="alert">
+Please Agree The Term And Conditions
+</div>
+							
+							
+							
+							
+							
+						<%}
+						
+						
+						
+							session.removeAttribute("successMsg");
+							session.removeAttribute("failureMsg");
+							session.removeAttribute("check");
+
+
+			
+						%>
+								
 
 
 
-			<form action="SignUp" method="POST">
+					<div class="card-body">
+
+						<div class="card-heading text-center">
+
+							<h2 style="color: #d7ccc8">Sign up Here</h2>
+
+						</div>
+
+
+
+						<form action="signup" method="POST">
 
 
 							<div class="form-group">
 								<label for="exampleInputEmail1">Full Name</label> <input
-									type="text" class="form-control"  id="name"
+									type="text" class="form-control" id="name"
 									aria-describedby="name" placeholder="Enter Full Name"
 									name="name" required> <small id="name"
 									class="form-text text-muted">We'll never share your
@@ -74,9 +129,9 @@ border-radius:10px;
 							<div class="form-group">
 								<label for="exampleInputEmail1">Phone Number</label> <input
 									type="text" class="form-control" id="no"
-									aria-describedby="name" placeholder="Enter Number" name="phone"  required>
-								<small id="no" class="form-text text-muted">We'll never
-									share your number with anyone else.</small>
+									aria-describedby="name" placeholder="Enter Number" name="phone"
+									required> <small id="no" class="form-text text-muted">We'll
+									never share your number with anyone else.</small>
 							</div>
 
 
@@ -85,7 +140,7 @@ border-radius:10px;
 								<label for="exampleInputEmail1">Email address</label> <input
 									type="email" class="form-control" id="exampleInputEmail1"
 									aria-describedby="emailHelp" placeholder="Enter email"
-									name="email"  required> <small id="emailHelp"
+									name="email" required> <small id="emailHelp"
 									class="form-text text-muted">We'll never share your
 									email with anyone else.</small>
 							</div>
@@ -97,32 +152,39 @@ border-radius:10px;
 							<div class="form-group">
 								<label for="exampleInputPassword1">Password</label> <input
 									type="password" class="form-control" id="exampleInputPassword1"
-									placeholder="Password" name="password"  required>
+									placeholder="Password" name="password" required>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" class="form-check-input"
+									id="exampleCheck1" name="check"> <label class="form-check-label"
+									for="exampleCheck1">Agree To Term And Conditions</label>
 							</div>
 							<div class="col-md-6 offset-md-3 text-center">
 
-							<button type="submit" class="btn  ">Sign Up</button>
-							
-								
-								</div>
+								<button type="submit" class="btn  ">Sign Up</button>
+
+
+							</div>
+
+
 						</form>
 
 
-</div>
+					</div>
 
 
-</div>
+				</div>
 
 
-</div>
-
-
-
-</div>
+			</div>
 
 
 
-</div>
+		</div>
+
+
+
+	</div>
 
 
 
