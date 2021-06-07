@@ -77,8 +77,8 @@ background-color: #bcaaa4;
 <div class="col-md-3 lol">
 
 
-<a href="" class="btn btn-cust ">Login</a>
-<a href="" class="btn btn-cust">Sign In</a>
+<a href="signin.jsp" class="btn btn-cust ">Login</a>
+<a href="register.jsp" class="btn btn-cust">Sign In</a>
 </div>
 
 </div>

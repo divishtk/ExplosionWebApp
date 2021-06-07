@@ -1,3 +1,5 @@
+<%@page import="java.sql.Connection"%>
+<%@page import="com.DB.DBConnection"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -40,7 +42,17 @@ padding:7px 10px;
 
 
 </style>
+
+
+
+
+
+
 <body style=" background-color:#faffff">
+
+
+
+
 	<%@include file="Components/navbar.jsp"%>
 	<!--  <h2 class="text text-center">Explosion De Dessert</h2>-->
 	<div class="container-fluid image">
@@ -53,6 +65,17 @@ padding:7px 10px;
 
 	
 	<!-- New Desserts -->
+	
+	
+	<%
+		
+Connection con=DBConnection.getConnection();
+out.println(con);
+
+
+
+%>
+	
 
 	<div class="container mt-5">
 	
